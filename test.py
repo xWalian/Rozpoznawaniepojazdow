@@ -40,6 +40,7 @@ def check_images_in_directory(model, directory):
     print(f"Skuteczność wyszukiwania: {accuracy * 100:.2f}%")
 
 
-directory_to_check = 'Danedotestowania'
+directory_to_check = input('Podaj folder do sprawdzenia: ')
 loaded_model = joblib.load('modelpojazdow.pkl')
 check_images_in_directory(loaded_model, directory_to_check)
+input()

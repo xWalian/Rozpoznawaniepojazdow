@@ -31,7 +31,7 @@ def load_custom_images(directory, target_size=(100, 100)):
 def extract_features(images):
     return np.array([image.reshape(-1) for image in images])
 
-custom_data_directory = 'DaneTreningowe'
+custom_data_directory = input("Podaj folder danych treningowych: ")
 image_data, target_labels = load_custom_images(custom_data_directory)
 
 
@@ -60,3 +60,4 @@ if knn_model.n_neighbors <= len(X_test_scaled):
     print(f"Dokładność modelu KNN: {accuracy * 100:.2f}%")
 else:
     print("Liczba sąsiadów jest większa niż liczba próbek testowych.")
+input()
